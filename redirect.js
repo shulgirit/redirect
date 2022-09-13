@@ -31,10 +31,12 @@ const DetectionMethod = {
       //   document.dispatchEvent(event);
   
       //   // Set in session storage so we don't have to compute again
-      //   window.sessionStorage.setItem("russia-redirect", "1");
+        window.sessionStorage.setItem("russia-redirect", "1");
       // } catch (error) {
       //   // Ignore errors in storage or events
       // }
+      window.sessionStorage.setItem("israel-redirect", "1");
+
       window.location.assign(REDIRECT_URL);
     };
   
@@ -42,7 +44,7 @@ const DetectionMethod = {
     try {
       var shouldRedirect = window.sessionStorage.getItem("israel-redirect");
       // If we already computed to redirect you, do it immediately
-      if (shouldRedirect === "1") return redirect();
+      if (shouldRedirect === "1") return 
       // If we already skipped you, no need to redo the detection
       else if (shouldRedirect === "0") return;
     } catch (error) {
