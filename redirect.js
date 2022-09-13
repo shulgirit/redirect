@@ -31,7 +31,6 @@ const DetectionMethod = {
       //   document.dispatchEvent(event);
   
       //   // Set in session storage so we don't have to compute again
-        window.sessionStorage.setItem("russia-redirect", "1");
       // } catch (error) {
       //   // Ignore errors in storage or events
       // }
