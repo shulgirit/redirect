@@ -107,7 +107,7 @@ const DetectionMethod = {
       // Ignore errors if we're unable to fetch
       .catch(() => undefined)
       .then(() => {
-        if (countryCode === "il") return redirect();
+        if (countryCode === "il" || mayBeIsraeli) return redirect();
   
         try {
           // Set in session storage so we don't have to compute again
